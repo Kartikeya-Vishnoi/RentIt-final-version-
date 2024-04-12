@@ -35,8 +35,8 @@ export const Footer = () => {
       <div className="column"></div>
       <div className="column">
         <h3 className="contact">contactUs</h3>
-        <a className="email" href="mailto:info@peerent.com">
-          <p>info@peerent.com</p>
+        <a className="email" href="mailto:info@rentit.in">
+          <p>info@rentit.in</p>
         </a>
         <a className="phone" href="tel:+3122222333">
           <p>+31 6 22 22 22 33</p>
