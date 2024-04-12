@@ -49,10 +49,10 @@ export const Footer = () => {
       </div>
       <div className="column">
         <h3 className="contact">followUs</h3>
-        <FontAwesomeIcon icon={["fab", "facebook"]} />
-        <FontAwesomeIcon icon={["fab", "instagram"]} />
-        <FontAwesomeIcon icon={["fab", "linkedin"]} />
-        <FontAwesomeIcon icon={["fab", "x-twitter"]} />
+        <FontAwesomeIcon icon={["fab", "facebook"]} onClick={() => {window.open("https://www.facebook.com", '_blank')}}/>
+        <FontAwesomeIcon icon={["fab", "instagram"]} onClick={() => {window.open("https://www.instagram.com", '_blank')}}/>
+        <FontAwesomeIcon icon={["fab", "linkedin"]} onClick={() => {window.open("https://www.linkedin.com", '_blank')}}/>
+        <FontAwesomeIcon icon={["fab", "x-twitter"]} onClick={() => {window.open("https://www.twitter.com", '_blank')}}/>
       </div>
     </footer>
   );
