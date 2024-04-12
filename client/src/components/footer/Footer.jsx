@@ -38,14 +38,14 @@ export const Footer = () => {
         <a className="email" href="mailto:info@rentit.in">
           <p>info@rentit.in</p>
         </a>
-        <a className="phone" href="tel:+3122222333">
-          <p>+31 6 22 22 22 33</p>
+        <a className="phone" href="tel:+916978980938">
+          <p>+91-6978980938</p>
         </a>
       </div>
       <div className="column">
         <h3 className="contact">ourLocation</h3>
-        <p>Amsterdam, 1031KS</p>
-        <p>Overhoeksplein 2</p>
+        <p>Kumaraswamy Layout</p>
+        <p>Bengaluru</p>
       </div>
       <div className="column">
         <h3 className="contact">followUs</h3>
