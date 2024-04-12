@@ -11,7 +11,24 @@ export const Footer = () => {
   return (
     <footer>
       <div className="column">
-        <img src={Logo} alt="logo-black" />
+      <span style={{
+            fontFamily: 'Arial, sans-serif',
+            color: '#c23d69',
+            fontSize: '38px',
+            textDecoration:'none',
+            fontWeight:'800',
+            marginLeft:'32px'
+          }}>
+            rent
+          </span>
+          <span style={{
+            fontFamily: 'Arial, sans-serif',
+            color: '#86bb44',
+            fontSize: '38px',
+            fontWeight:'800',
+          }}>
+            It
+          </span>
         <p className="description">Hub for Borrowing & Lending</p>
         <p className="copyright">© Copyright 2024.</p>
       </div>

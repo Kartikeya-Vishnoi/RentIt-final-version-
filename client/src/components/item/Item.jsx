@@ -123,9 +123,9 @@ function Item() {
               </span>
               {item.price === null || item.price === 0
                 ? ""
-                : new Intl.NumberFormat(userLocale, {
+                : new Intl.NumberFormat('en-IN', {
                     style: "currency",
-                    currency: "EUR",
+                    currency: "INR",
                   }).format(item.price)}
             </p>
             {item.deposit === null || item.deposit === 0 ? (
@@ -133,9 +133,9 @@ function Item() {
             ) : (
               <p className="item_detail">
                 <span className="item_label">Deposit:</span>{" "}
-                {new Intl.NumberFormat(userLocale, {
+                {new Intl.NumberFormat('en-IN', {
                   style: "currency",
-                  currency: "EUR",
+                  currency: "INR",
                 }).format(item.deposit)}
               </p>
             )}

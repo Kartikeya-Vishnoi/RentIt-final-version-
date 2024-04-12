@@ -3,7 +3,7 @@ import { useAuth } from "../Account/AuthContext";
 import SignUp from "../Account/SignUp";
 import Login from "../Account/Login";
 import SearchIcon from "../../assets/search-icon.svg";
-import Logo from "../../assets/logo-color.svg";
+import Logo from "../../assets/rentit-high-resolution-logo.png";
 import AddItemButton from "./AddItemButton";
 import Message from "./Message";
 import ProfileDropdown from "./ProfileDropdown";
@@ -37,7 +37,23 @@ function Header() {
     <header className="header">
       <div className="logo">
         <Link to="/">
-          <img src={Logo} alt="Logo" className="logo-image" />
+          <span style={{
+            fontFamily: 'Arial, sans-serif',
+            color: '#c23d69',
+            fontSize: '38px',
+            textDecoration:'none',
+            fontWeight:'700',
+          }}>
+            rent
+          </span>
+          <span style={{
+            fontFamily: 'Arial, sans-serif',
+            color: '#86bb44',
+            fontSize: '38px',
+            fontWeight:'700',
+          }}>
+            It
+          </span>
         </Link>{" "}
       </div>
       <div className="header-content">

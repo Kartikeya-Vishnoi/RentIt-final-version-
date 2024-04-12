@@ -1,12 +1,37 @@
 import Message from "../models/Message.js";
 import { logError } from "../util/logging.js";
+import CryptoJS from 'crypto-js';
+import dotnev from 'dotenv'
+dotnev.config();
+
+const secretKey = process.env.secretKey
+
+// Function to encrypt a message
+const encryptMessage = (message) => {
+  return CryptoJS.AES.encrypt(message, secretKey).toString();
+};
+
+// Function to decrypt a message
+const decryptMessage = (encryptedMessage) => {
+  const bytes = CryptoJS.AES.decrypt(encryptedMessage, secretKey);
+  return bytes.toString(CryptoJS.enc.Utf8);
+};
+
 
 // Controller function to create a new message
 export const createMessage = async (message) => {
   try {
     const { userName, text, pic, room, time } = message;
-    const newMessage = new Message({ userName, text, pic, room, time });
+
+    // Encrypt the message text using AES
+    const encryptedText = encryptMessage(text);
+
+    // Create a new Message instance with the encrypted text
+    const newMessage = new Message({ userName, text: encryptedText, pic, room, time });
+
+    // Save the new message
     const savedMessage = await newMessage.save();
+
     return savedMessage;
   } catch (error) {
     logError(error);
@@ -18,7 +43,14 @@ export const createMessage = async (message) => {
 export const getMessagesByRoom = async (room) => {
   try {
     const messages = await Message.find({ room });
-    return messages;
+
+    // Decrypt the text of each message
+    const messagesWithDecryptedText = messages.map(message => ({
+      ...message.toObject(),
+      text: decryptMessage(message.text)
+    }));
+
+    return messagesWithDecryptedText;
   } catch (error) {
     logError("Error retrieving messages:", error);
     return []; // Return an empty array or handle the error as needed

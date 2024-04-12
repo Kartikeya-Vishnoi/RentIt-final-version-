@@ -31,9 +31,9 @@ const ItemElement = ({ item, userLocale }) => {
         <span className="product-item__price">
           {item.price === null || item.price === 0
             ? "Free to rent"
-            : new Intl.NumberFormat(userLocale, {
+            : new Intl.NumberFormat('en-IN', {
                 style: "currency",
-                currency: "EUR",
+                currency: "INR",
               }).format(item.price) + "/per day"}
         </span>
         {/* Link to the DetailedPage with the itemId */}
