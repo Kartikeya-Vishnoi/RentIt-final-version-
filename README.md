@@ -1,6 +1,6 @@
 # Group 63 final project
 
-![Screenshot](https://res.cloudinary.com/dibnqoge8/image/upload/v1710500353/peerEnt-2_yj7rsk.png)
+![Screenshot](https://drive.google.com/file/d/118dcRUAZ3rrFttpmBRrdX0Mc9eOCbD4y/view?usp=sharing)
 
 This is the final year project called as RentIt of DSCE(2024) batch 63. We developed this using the MERN stack by following the agile methodology with our team and a group of mentors. A quick guide to what we built:
 
