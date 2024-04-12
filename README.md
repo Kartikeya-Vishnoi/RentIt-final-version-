@@ -1,4 +1,4 @@
-# Class 45 final project
+# Group 63 final project
 
 ![Screenshot](https://res.cloudinary.com/dibnqoge8/image/upload/v1710500353/peerEnt-2_yj7rsk.png)
 
