@@ -36,12 +36,12 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <span style={{
             fontFamily: 'Arial, sans-serif',
             color: '#c23d69',
             fontSize: '38px',
-            textDecoration:'none',
+            // textDecoration:'none',
             fontWeight:'700',
           }}>
             rent
@@ -50,6 +50,7 @@ function Header() {
             fontFamily: 'Arial, sans-serif',
             color: '#86bb44',
             fontSize: '38px',
+            // textDecoration:'none',
             fontWeight:'700',
           }}>
             It

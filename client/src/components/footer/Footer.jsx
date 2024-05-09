@@ -35,8 +35,8 @@ export const Footer = () => {
       <div className="column"></div>
       <div className="column">
         <h3 className="contact">contactUs</h3>
-        <a className="email" href="mailto:info@rentit.com">
-          <p>info@rentit.com</p>
+        <a className="email" href="mailto:info@rentit.in">
+          <p>info@rentit.in</p>
         </a>
         <a className="phone" href="tel:+3122222333">
           <p>+91 0000000000</p>
@@ -44,11 +44,15 @@ export const Footer = () => {
       </div>
       <div className="column">
         <h3 className="contact">ourLocation</h3>
-        <p>Kumarswmay Layout</p>
-        <p>Bangalore</p>
+        <p>Kumaraswamy Layout</p>
+        <p>Bengaluru</p>
       </div>
       <div className="column">
         <h3 className="contact">followUs</h3>
+        <FontAwesomeIcon icon={["fab", "facebook"]} onClick={() => {window.open("https://www.facebook.com", '_blank')}}/>
+        <FontAwesomeIcon icon={["fab", "instagram"]} onClick={() => {window.open("https://www.instagram.com", '_blank')}}/>
+        <FontAwesomeIcon icon={["fab", "linkedin"]} onClick={() => {window.open("https://www.linkedin.com", '_blank')}}/>
+        <FontAwesomeIcon icon={["fab", "x-twitter"]} onClick={() => {window.open("https://www.twitter.com", '_blank')}}/>
         <FontAwesomeIcon icon={["fab", "facebook"]} onClick={() => {window.open("https://www.facebook.com", '_blank')}}/>
         <FontAwesomeIcon icon={["fab", "instagram"]} onClick={() => {window.open("https://www.instagram.com", '_blank')}}/>
         <FontAwesomeIcon icon={["fab", "linkedin"]} onClick={() => {window.open("https://www.linkedin.com", '_blank')}}/>
