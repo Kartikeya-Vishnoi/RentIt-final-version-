@@ -1,5 +1,5 @@
 {
   "testFiles": "**/*.spec.js",
-  "baseUrl": "http://18.61.78.186:8080",
-  "backendUrl": "http://18.61.78.186:5000"
+  "baseUrl": "http://18.61.27.179:8080",
+  "backendUrl": "http://18.61.27.179:5000"
 }
