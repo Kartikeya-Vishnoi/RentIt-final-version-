@@ -55,6 +55,5 @@ module.exports = {
   // To tell the dev server that everything should go back to index.html
   devServer: {
     historyApiFallback: true,
-    disableHostCheck: true,
   },
 };
