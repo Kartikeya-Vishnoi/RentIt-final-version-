@@ -8,7 +8,6 @@ const Home = () => {
     <div>
       <Header />
       <UserInfo />
-
       <Footer />
     </div>
   );

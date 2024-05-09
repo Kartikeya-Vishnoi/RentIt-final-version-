@@ -29,8 +29,8 @@ export const createCheckout = async (req, res) => {
     });
 
     const price = await stripe.prices.create({
-      unit_amount: totalPrice * 100, // Amount in cents
-      currency: "eur",
+      unit_amount: totalPrice, // Amount in cents
+      currency: "inr",
       product: product.id,
     });
 

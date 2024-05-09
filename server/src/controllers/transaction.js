@@ -1,5 +1,6 @@
 import Transaction from "../models/Transaction.js";
 import { Item } from "../models/Item.js";
+import {User} from "../models/User.js"
 import { logError, logInfo } from "../util/logging.js";
 
 export const createTransaction = async (req, res) => {
@@ -133,8 +134,35 @@ export const getUserTransactions = async (req, res) => {
   }
 };
 
+export const getTransactionsonitemId = async (req, res) => {
+  try {
+    const { itemId } = req.params;
+    const existingTransactions = await Transaction.find({ item_id: itemId });
+    const transactionsWithUserImages = [];
+
+    // Iterate through each transaction and fetch user image URL
+    for (const transaction of existingTransactions) {
+      const { borrower_id } = transaction;
+      const user = await User.findById(borrower_id);
+
+      // If user is found, add user image URL to transaction object
+      if (user) {
+        const { userImageURL } = user;
+        const transactionWithUserImage = { ...transaction.toObject(), userImageURL };
+        transactionsWithUserImages.push(transactionWithUserImage);
+      }
+    }
+
+    res.status(200).json({ success: true, result: transactionsWithUserImages });
+  } catch (error) {
+    console.error("Error retrieving transactions with user images:", error);
+    res.status(500).json({ error: "Internal server error", success: false });
+  }
+};
+
 export default {
   createTransaction,
   getUnavailableDates,
   getUserTransactions,
+  getTransactionsonitemId
 };

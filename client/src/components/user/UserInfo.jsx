@@ -84,6 +84,7 @@ const UserInfo = () => {
                     <button onClick={() => toggleItemActiveStatus(item._id)}>
                       {item.active ? "Disable" : "Activate"}
                     </button>
+                    
                   </div>
                 ))}
               </ul>
@@ -101,6 +102,7 @@ const UserInfo = () => {
                     key={item._id}
                     item={item}
                     userLocale={userLocale}
+                    showRenterDetails={true}
                   />
                 ))}
               </ul>
