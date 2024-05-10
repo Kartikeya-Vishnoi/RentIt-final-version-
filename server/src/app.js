@@ -23,7 +23,7 @@ app.io = io;
 app.use(express.json());
 // Allow everyone to access our API. In a real application, we would need to restrict this!
 app.use(cors({
-    origin: ["http://rentit.hopin.space:8080", "http://18.61.27.179:8080", "http://localhost:8080"], // Add your allowed origins here
+    origin: ["http://rentit.hopin.space:8080", "http://18.61.27.179:8080", "http://localhost:8080", "http://rentit.hopin.space", "http://18.61.27.179"], // Add your allowed origins here
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
   }));
