@@ -21,8 +21,13 @@ app.io = io;
 
 // Tell express to use the json middleware
 app.use(express.json());
-// Allow everyone to access our API. In a real application, we would need to restrict this!
-app.use(cors());
+
+// Configure CORS
+app.use(cors({
+  origin: ["http://rentit.hopin.space:8080", "http://18.61.27.179:8080"], // Add your allowed origins here
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 /****** Attach routes ******/
 /**
