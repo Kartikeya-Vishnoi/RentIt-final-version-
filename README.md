@@ -1,15 +1,11 @@
 # Group 63 final project
 
-![Screenshot](https://drive.google.com/file/d/118dcRUAZ3rrFttpmBRrdX0Mc9eOCbD4y/view?usp=sharing)
-
 This is the final year project called as RentIt of DSCE(2024) batch 63. We developed this using the MERN stack by following the agile methodology with our team and a group of mentors. A quick guide to what we built:
 
 - Implemented item search functionality by title or category
 - Developed user registration system for listing, renting and managing items
 - Integrated secure payment and messaging for item rentals
 - Implemented notification system for user engagement
-
-[Click here for the Demo version](https://c45-group-b-1af54f32aa25.herokuapp.com/)
 
 ## 1. Setup
 
