@@ -1,1 +1,52 @@
-    
+.renter-card {
+    display: inline-block;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .renter-card__image-container {
+    width: 100%; /* Cover the width of the parent card */
+    padding: 10px;
+    background-color: #fce7f3;
+    background-size: 100%;
+    border-radius: 8px 8px 0 0
+  }
+  
+  .renter-card__image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .renter-card__details {
+    width: 100%; /* Cover the width of the parent card */
+    padding: 10px;
+    background-color: white;
+    background-size: 100%;
+  }
+  
+  .renter-card__name {
+    margin: 0;
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  .renter-card__dates,
+  .renter-card__rent {
+    margin: 0;
+  }
+  
+  .renter-card__dates strong,
+  .renter-card__rent strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  

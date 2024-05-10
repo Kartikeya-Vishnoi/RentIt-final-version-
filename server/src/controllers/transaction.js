@@ -151,12 +151,6 @@ export const getTransactionsonitemId = async (req, res) => {
         const transactionWithUserImage = { ...transaction.toObject(), userImageURL, username };
         transactionsWithUserImages.push(transactionWithUserImage);
       }
-      // if (user){
-      //   const {username} = user;
-      //   const transactionWithUserImage = { ...transaction.toObject(), username };
-      //   transactionsWithUserImages.push(transactionWithUserImage);
-      // }
-      console.log(transactionsWithUserImages)
     }
 
     res.status(200).json({ success: true, result: transactionsWithUserImages });

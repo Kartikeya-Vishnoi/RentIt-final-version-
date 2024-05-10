@@ -1,0 +1,11 @@
+.renters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 85%;
+    background-color: #134e4a;
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center children */
+    border-radius: 15px;
+}
+

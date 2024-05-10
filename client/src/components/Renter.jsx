@@ -1,75 +1,44 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import "./ItemsList.css"; // Import the CSS file
-import Renter from "./Renter";
+import "./Renter.css"; // Import the CSS file
 
 const Renter = (props) => {
-  // Function to shorten the description to the first 5 words
-  // const shortenDescription = (text, words) => {
-  //   const textWords = text.split(" ");
-  //   const shortenedText = textWords.slice(0, words).join(" ");
-  //   return shortenedText;
-  // };
+  // Function to format date
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', options);
+  };
 
   return (
-    <li className="product-item">
-      <Renter userId={item.borrower_id} />
-      <img
-        src={item.userImageURL}
-        alt={item.title}
-        className="product-item__image"
-      />
-      <h2 className="product-item__name">
-        {item.title} <span> - {item.category} </span>
-      </h2>
-      <div className="item-description">
-        {" "}
-        {shortenDescription(item.description, 7)}...
+    <div className="renter-card">
+      <div className="renter-card__image-container">
+        <img
+          src={props.imgurl}
+          alt={props.borrower}
+          className="renter-card__image"
+        />
       </div>
-      <div className="product-item__view">
-        <span className="product-item__price">
-          {item.price === null || item.price === 0
-            ? "Free to rent"
-            : new Intl.NumberFormat('en-IN', {
-              style: "currency",
-              currency: "INR",
-            }).format(item.price) + "/per day"}
-        </span>
-        {/* Link to the DetailedPage with the itemId */}
-
-        {/* <Link to={`/item/${item._id}`} className="product-item__view-button">
-          View Details
-        </Link>{" "} */}
-        {showRenterDetails === true ?
-          <div className="button_list">
-            {/* <Link to={`/item/${item._id}`} className="product-item__view-button">
-              View Details
-            </Link> */}
-            <Link to={`/renters/${item._id}`} className="product-item__view-button">
-              View Details
-            </Link>
-          </div> :
-          <Link to={`/item/${item._id}`} className="product-item__view-button">
-            View Details
-          </Link>
-        }
+      <div className="renter-card__details">
+        <h2 className="renter-card__name">{props.borrower}</h2>
+        <p className="renter-card__dates">
+          <strong>Start Date:</strong> {formatDate(props.start)} <br />
+          <strong>End Date:</strong> {formatDate(props.end)}
+        </p>
+        <p className="renter-card__rent">
+          <strong>Total Rent:</strong> Rs.{props.rent}
+        </p>
       </div>
-    </li>
+    </div>
   );
 };
-ItemElement.propTypes = {
-  item: PropTypes.shape({
-    _id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    imageURL: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    price: PropTypes.number,
-    renter_id: PropTypes.string.isRequired,
-    active: PropTypes.bool.isRequired,
-  }).isRequired,
-  userLocale: PropTypes.string.isRequired,
+
+Renter.propTypes = {
+  imgurl: PropTypes.string.isRequired,
+  borrower: PropTypes.string.isRequired,
+  start: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  rent: PropTypes.number.isRequired,
 };
 
-export default ItemElement;
+export default Renter;
