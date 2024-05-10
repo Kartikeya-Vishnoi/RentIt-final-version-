@@ -11,7 +11,7 @@ const Renters = (props) => {
     useEffect(() => {
         const fetchRenterDetails = async () => {
             try {
-                const response = await fetch(`http://rentit.hopin.space:5000/api/transactions/renterdetails/${itemId}`);
+                const response = await fetch(`http://18.61.27.179:5000/api/transactions/renterdetails/${itemId}`);
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
