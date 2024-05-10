@@ -9,8 +9,6 @@ This is the final year project called as RentIt of DSCE(2024) batch 63. We devel
 - Integrated secure payment and messaging for item rentals
 - Implemented notification system for user engagement
 
-[Click here for the Demo version](https://c45-group-b-1af54f32aa25.herokuapp.com/)
-
 ## 1. Setup
 
 First, to setup all the directories run the following in the main directory:
