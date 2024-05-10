@@ -147,10 +147,16 @@ export const getTransactionsonitemId = async (req, res) => {
 
       // If user is found, add user image URL to transaction object
       if (user) {
-        const { userImageURL } = user;
-        const transactionWithUserImage = { ...transaction.toObject(), userImageURL };
+        const { userImageURL, username } = user;
+        const transactionWithUserImage = { ...transaction.toObject(), userImageURL, username };
         transactionsWithUserImages.push(transactionWithUserImage);
       }
+      // if (user){
+      //   const {username} = user;
+      //   const transactionWithUserImage = { ...transaction.toObject(), username };
+      //   transactionsWithUserImages.push(transactionWithUserImage);
+      // }
+      console.log(transactionsWithUserImages)
     }
 
     res.status(200).json({ success: true, result: transactionsWithUserImages });

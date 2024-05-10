@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 import "./ItemsList.css"; // Import the CSS file
 import Renter from "./Renter";
 
-const ItemElement = ({ item, userLocale, showRenterDetails }) => {
+const Renter = (props) => {
   // Function to shorten the description to the first 5 words
-  const shortenDescription = (text, words) => {
-    const textWords = text.split(" ");
-    const shortenedText = textWords.slice(0, words).join(" ");
-    return shortenedText;
-  };
+  // const shortenDescription = (text, words) => {
+  //   const textWords = text.split(" ");
+  //   const shortenedText = textWords.slice(0, words).join(" ");
+  //   return shortenedText;
+  // };
 
   return (
     <li className="product-item">
-      <Renter userId={item.renter_id} />
+      <Renter userId={item.borrower_id} />
       <img
-        src={item.imageURL}
+        src={item.userImageURL}
         alt={item.title}
         className="product-item__image"
       />
