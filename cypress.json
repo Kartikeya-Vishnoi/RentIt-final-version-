@@ -1,5 +1,5 @@
 {
   "testFiles": "**/*.spec.js",
   "baseUrl": "http://rentit.hopin.space/app",
-  "backendUrl": "http://rentit.hopin.space/api"
+  "backendUrl": "http://rentit.hopin.space/bkapi"
 }

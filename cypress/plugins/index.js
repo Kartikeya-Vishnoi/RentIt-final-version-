@@ -17,7 +17,7 @@ const axios = require("axios");
 /**
  * @type {Cypress.PluginConfig}
  */
-const baseUrl = "http://rentit.hopin.space/api";
+const baseUrl = "http://rentit.hopin.space/bkapi";
 
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
