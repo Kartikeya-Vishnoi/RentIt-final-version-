@@ -17,7 +17,7 @@ const axios = require("axios");
 /**
  * @type {Cypress.PluginConfig}
  */
-const baseUrl = "http://ec2-18-61-27-179.ap-south-2.compute.amazonaws.com:5000";
+const baseUrl = "http://rentit.hopin.space:5000";
 
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
