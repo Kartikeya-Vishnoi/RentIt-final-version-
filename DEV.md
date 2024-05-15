@@ -10,7 +10,7 @@ To start developing, make sure you have created the `.env` files and did the set
 
 The client will be built using `webpack`. The configuration for that is in the `webpack.config.js` file. When running in production the command `npm run build` will be run which will create a `dist` folder with the compiled version of the code. When running in dev mode the `webpack-dev-server` will build it in memory. This will also automatically rebuild on file changes!
 
-Our client will always run on `https://ec2-18-61-27-179.ap-south-2.compute.amazonaws.com:8080`. So if it does not automatically open your browser you can go to that URL. It will connect to the URL put in the `.env` file, defaulting to `https://ec2-18-61-27-179.ap-south-2.compute.amazonaws.com:5000`.
+Our client will always run on `https://rentit.hopin.space/app`. So if it does not automatically open your browser you can go to that URL. It will connect to the URL put in the `.env` file, defaulting to `https://rentit.hopin.space/api`.
 
 You will also notice that to connect to the server our `useFetch` hook adds `/api` to the url. This is because on `heroku` our backend not only has its own routes but also hosts the client code. This way it allows us to differentiate between what needs to return the client code and what is an actual request to our backend.
 
