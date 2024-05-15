@@ -11,6 +11,9 @@ import expenseRouter from "./routes/expense.js";
 import transactionRouter from "./routes/transaction.js";
 import checkoutRouter from "./routes/checkout.js";
 import messageRouter from "./routes/message.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // Create an express server
 const app = express();
@@ -21,8 +24,15 @@ app.io = io;
 
 // Tell express to use the json middleware
 app.use(express.json());
-// Allow everyone to access our API. In a real application, we would need to restrict this!
-app.use(cors());
+
+// CORS configuration to allow specific origin
+const corsOptions = {
+    origin: process.env.BASE_CLIENT_URL,
+    optionsSuccessStatus: 200
+};
+
+// Use CORS with the configured options
+app.use(cors(corsOptions));
 
 /****** Attach routes ******/
 /**
